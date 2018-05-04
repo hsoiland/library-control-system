@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.URL?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="controller.AdminController"
+    alignment="center" spacing="10"
+    styleClass="root">
+    <HBox spacing="10">
+        <ImageView>
+            <image>
+                <Image url="@UTS-logo.jpg"/>
+            </image>
+        </ImageView>
+        <VBox>
+            <Label styleClass="heading" text="Library"/>
+            <Label styleClass="heading" text="Management"/>
+            <Label styleClass="heading" text="System"/>
+        </VBox>
+    </HBox>
+    <Button text="Add Patron" onAction="#handleAddPatron"/>
+    <Button text="Remove Patron" onAction="#handleRemPatron"/>
+    <Button text="Add Book to Catalogue" onAction="#handleAddBook"/>
+    <Button text="Remove Book from Catalogue" onAction="#handleRemBook"/>
+    <Button text="Close Administration Menu" onAction="#handleCloseAdmin"/>
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

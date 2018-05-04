@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PlaceHoldController" alignment="CENTER" spacing="10">
+    <HBox alignment="CENTER" spacing="5" >
+        <Label text="Patron Id:"/>
+        <TextField fx:id="patronIDTf"/>
+        <Button fx:id="selectPatronBtn" text="Select Patron" disable="true"/>
+    </HBox>
+    <Label text="Books:"/>
+    <ListView fx:id="booksToHoldLv" VBox.vgrow="ALWAYS" prefHeight="100" prefWidth="400" items="${controller.holdableBooks}"/>
+    <Button fx:id="holdBtn" text="Hold Selected Book" onAction="#handleHoldBook" disable="true"/>
+    <Label fx:id="holdingLbl"/>
+    <Button text="Close" onAction="#handleCloseHold"/>
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
+

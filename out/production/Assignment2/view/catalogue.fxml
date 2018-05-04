@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.CatalogueController"
+      alignment="center" spacing="10"
+      styleClass="root"
+>
+
+    <HBox spacing="10">
+        <ImageView>
+            <image>
+                <Image url="@UTS-logo.jpg"/>
+            </image>
+        </ImageView>
+        <VBox>
+            <Label styleClass="heading" text="Library"/>
+            <Label styleClass="heading" text="Management"/>
+            <Label styleClass="heading" text="System"/>
+        </VBox>
+    </HBox>
+
+    <Button  text="Show All Books" onAction="#handleAllBooks"/>
+    <Button text="Show Available Books" onAction="#handleAvailableBooks"/>
+    <Button  text="Show Books By Genre" onAction="#handleBooksByGenre"/>
+    <Button  text="Show Books By Author" onAction="#handleBooksByAuthor"/>
+    <Button text="Borrow Books" onAction="#handleBorrowBooks"/>
+    <Button  text="Return Books" onAction="#handleReturnBooks"/>
+    <Button  text="Place Hold" onAction="#handlePlaceHold"/>
+    <Button  text="Exit" onAction="#handleExitCatalogue"/>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

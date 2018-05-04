@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<?import javafx.scene.image.*?>
+
+<?import javafx.scene.chart.BarChart?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.LibraryController"
+      alignment="center" spacing="10"
+      styleClass="root">
+
+    <HBox spacing="10">
+        <ImageView>
+            <image>
+                <Image url="@UTS-logo.jpg"/>
+            </image>
+        </ImageView>
+            <VBox spacing="10">
+                <Label styleClass="heading" text="Library"/>
+                <Label styleClass="heading" text="Management"/>
+                <Label styleClass="heading" text="System"/>
+            </VBox>
+    </HBox>
+
+    <Button styleClass="button" text="Explore Catalogue" onAction="#handleCatalog"/>
+    <Button styleClass="button" text="View Patron Record" onAction="#handlePatRec"/>
+    <Button styleClass="button" text="View Favourite Books" onAction="#handleFavBook"/>
+    <Button styleClass="button" text="Enter Administration Mode" onAction="#handleAdmin"/>
+    <Button styleClass="button" text="Exit" onAction="#handleExit"/>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
